@@ -1,22 +1,11 @@
-
 import { searchByInternetIdentifier } from "@/modules/ip-tracker/application";
 import {
   KeyInformation,
   KeyInformationRepository,
   Location,
 } from "@/modules/ip-tracker/domain";
-import { PropsWithChildren, createContext, useState } from "react";
-
-export interface IpTrackerContextType {
-  keyInformation: KeyInformation;
-  location: Location;
-  searchByInternetIdentifier: (identifier: string) => void;
-  setLocation: (location: Location) => void;
-}
-
-export const IpTrackerContext = createContext<IpTrackerContextType>(
-  {} as IpTrackerContextType
-);
+import { PropsWithChildren, useState } from "react";
+import { IpTrackerContext } from "./IpTrackerContext";
 
 export const IpTrackerProvider = ({
   children,
@@ -34,7 +23,7 @@ export const IpTrackerProvider = ({
     setKeyInformation(information);
   };
 
-  const handleLocation = (location: Location) => {
+  const handleLocation = async (location: Location) => {
     setLocation(location);
   };
 

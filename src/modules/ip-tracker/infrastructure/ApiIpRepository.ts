@@ -8,7 +8,7 @@ export const createApiIpRepository = (): KeyInformationRepository => ({
 async function getIpInformation(identifier: string): Promise<KeyInformation> {
   const ipRegex = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/;
   const baseUrl = "https://geo.ipify.org/api/v2";
-  const apiKey = process.env.IP_GEOLOCALIZATION_API_KEY;
+  const apiKey = import.meta.env.VITE_IP_GEOLOCALIZATION_API_KEY;
   const searchParam = ipRegex.test(identifier)
     ? `ipAddress=${identifier}`
     : `domain=${identifier}`;
