@@ -1,8 +1,5 @@
 import { Location, LocationRepository } from "../domain";
 
-export function setInitialLocation(
-  locationRepository: LocationRepository,
-  location: Location
-) {
-  locationRepository.setLocation("initial", location);
+export function setInitialLocation(repository: LocationRepository) {
+  return async (location: Location) => repository.setLocation(location);
 }
