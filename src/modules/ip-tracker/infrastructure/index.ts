@@ -1,2 +1,1 @@
-export * from "./ApiIpRepository";
-export * from "./ApiResponse";
+export * from './ApiIpRepository';

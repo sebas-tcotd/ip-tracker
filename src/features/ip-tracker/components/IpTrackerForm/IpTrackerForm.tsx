@@ -1,9 +1,14 @@
-import { FormEventHandler, useState } from "react";
+import { FormEventHandler, useEffect, useState } from "react";
 import { useIpTrackerContext } from "../../context";
 
 export const IpTrackerForm = () => {
   const { searchByInternetIdentifier } = useIpTrackerContext();
   const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    searchByInternetIdentifier(inputValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit: FormEventHandler = (event) => {
     event.preventDefault();

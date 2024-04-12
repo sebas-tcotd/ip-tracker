@@ -11,22 +11,16 @@ export const IpTrackerProvider = ({
   children,
   repository,
 }: PropsWithChildren<{ repository: KeyInformationRepository }>) => {
-  const [keyInformation, setKeyInformation] = useState<KeyInformation>({
-    ipAddress: "",
-    isp: "",
-    location: "",
-    timezone: "",
-  });
+  const [keyInformation, setKeyInformation] = useState<KeyInformation>(
+    {} as KeyInformation
+  );
   const [location, setLocation] = useState<Location>({} as Location);
 
   const search = async (identifier: string) => {
-    const information = await searchByInternetIdentifier(repository)(
-      identifier
-    );
+    const [information, location] = await searchByInternetIdentifier(
+      repository
+    )(identifier);
     setKeyInformation(information);
-  };
-
-  const handleLocation = async (location: Location) => {
     setLocation(location);
   };
 
@@ -36,7 +30,6 @@ export const IpTrackerProvider = ({
         keyInformation,
         location,
         searchByInternetIdentifier: search,
-        setLocation: handleLocation,
       }}
     >
       {children}

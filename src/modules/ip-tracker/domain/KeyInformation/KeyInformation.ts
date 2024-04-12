@@ -1,5 +1,4 @@
 type IpAddressValue = string;
-
 export interface KeyInformation {
   ipAddress: IpAddressValue;
   location: string;
