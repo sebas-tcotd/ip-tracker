@@ -1,6 +1,4 @@
-import "./App.css";
-import { IpTrackerForm } from "./features/ip-tracker/components";
-import { IpInformation } from "./features/ip-tracker/components/IpInformation";
+import { Map, TrackingHeader } from "./features/ip-tracker/components";
 import { IpTrackerProvider } from "./features/ip-tracker/context";
 import { createApiIpRepository } from "./modules/ip-tracker/infrastructure";
 
@@ -8,12 +6,12 @@ function App() {
   const repository = createApiIpRepository();
 
   return (
-    <IpTrackerProvider repository={repository}>
-      <h1>Ip Address Tracker</h1>
-
-      <IpTrackerForm />
-      <IpInformation />
-    </IpTrackerProvider>
+    <main className="h-dvh flex flex-col">
+      <IpTrackerProvider repository={repository}>
+        <TrackingHeader />
+        <Map />
+      </IpTrackerProvider>
+    </main>
   );
 }
 

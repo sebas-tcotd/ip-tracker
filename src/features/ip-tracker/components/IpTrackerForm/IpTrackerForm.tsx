@@ -11,16 +11,24 @@ export const IpTrackerForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex items-center | w-full rounded-2xl overflow-hidden"
+    >
       <input
         id="identifier"
         type="text"
         value={inputValue}
         placeholder="Search for any IP address or domain"
         onChange={(event) => setInputValue(event.target.value)}
+        className="truncate h-full flex-grow | px-4"
       />
-      <button type="submit">
-        <img src="images/icon-arrow.svg" alt="Search" title="Search" />
+      <button
+        type="submit"
+        title="Search"
+        className="h-14 w-14 | flex items-center justify-center flex-shrink | bg-black"
+      >
+        <img src="img/icon-arrow.svg" alt="Search" />
       </button>
     </form>
   );
