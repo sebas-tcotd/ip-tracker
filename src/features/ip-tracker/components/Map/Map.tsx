@@ -1,7 +1,7 @@
 export const Map = () => {
   return (
-    <div className="flex-grow-[67] sm:flex-grow-[264] md:flex-grow-[137]">
-      Feature Map <em>coming soon…</em>
+    <div className="flex items-center justify-center flex-grow-[67] sm:flex-grow-[264] md:flex-grow-[26]">
+      <p>Map feature coming soon…</p>
     </div>
   );
 };
