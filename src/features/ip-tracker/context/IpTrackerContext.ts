@@ -5,6 +5,7 @@ export interface IpTrackerContextType {
   keyInformation: KeyInformation;
   location: Location;
   searchByInternetIdentifier: (identifier: string) => Promise<void>;
+  error: boolean;
 }
 
 export const IpTrackerContext = createContext<IpTrackerContextType>(

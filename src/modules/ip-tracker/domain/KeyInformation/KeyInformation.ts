@@ -5,3 +5,11 @@ export interface KeyInformation {
   timezone: string;
   isp: string;
 }
+
+export const ensureIdentifierIsValid = (identifier: string): void => {
+  if (hasHttpPrefix(identifier)) throw new Error("Invalid identifier");
+};
+
+function hasHttpPrefix(identifier: string): boolean {
+  return identifier.startsWith("http://") || identifier.startsWith("https://");
+}

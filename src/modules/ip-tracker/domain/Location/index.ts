@@ -1,2 +1,1 @@
-export * from './Location';
-export * from './LocationRepository';
+export * from "./Location";
