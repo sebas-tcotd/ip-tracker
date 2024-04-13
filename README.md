@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Frontend Mentor - IP address tracker solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Users should be able to:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
+- See their own IP address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
+
+### Screenshots
+
+| | Desktop | Mobile | 
+| -- | -- | -- |
+| IP | ![](./docs/ip-desktop.png) | ![](./docs/mobile-ip.png) |
+| Domain name | ![](./docs/desktop-domain-name.png) | ![](./docs/mobile-domain-name.png) |
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Mobile-first workflow
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/) - To render the UI
+- [TailwindCSS](https://tailwindcss.com/) - For styles
+
+### What I learned
+
+In this project, I have proposed to use a Clean Architecture approach. I have learned the basic concepts to create an application using this architecture, separating it under the respective layers.
+Despite being a small project for this type of architectures, since it is my first approach to this type of design, I think it has been, at least, a good start.
+
+### Continued development
+
+I would like to reinforce my Clean Architecture concepts to better apply them in future projects I create. What I found a bit difficult -at least at first- was trying to implement the Repository pattern correctly. Also, how the layers are connected to each other.
+
+### Useful resources
+
+
+- [(Spanish) Improve your code with Clean Architecture](https://www.youtube.com/watch?v=bdnpXzgj1oY&t=522s&pp=ygUbY2xlYW4gYXJjaGl0ZWN0dXJlIGZyb250ZW5k) - This video helped me to start with a basic concept of how I would start coding the project.
+- [Clean Architecture on Frontend](https://bespoyasov.me/blog/clean-architecture-on-frontend/) - This is a very comprehensive article about how could you implement Clean Architecture with Frontend considerations.
+
+## Author
+
+- Website - [My GitHub](https://github.com/sebas-tcotd)
+- Frontend Mentor - [@sebas-tcotd](https://www.frontendmentor.io/profile/sebas-tcotd)
+- Twitter - [@sebas_tcotd](https://twitter.com/sebas_tcotd)
