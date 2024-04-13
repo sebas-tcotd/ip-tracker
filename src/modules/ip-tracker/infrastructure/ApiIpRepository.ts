@@ -24,7 +24,7 @@ async function getIpInformation(
       ipAddress: apiResponse.ip,
       isp: apiResponse.isp,
       location: apiResponse.location.city,
-      timezone: apiResponse.location.timezone,
+      timezone: `UTC ${apiResponse.location.timezone}`,
     },
     { latitude: apiResponse.location.lat, longitude: apiResponse.location.lng },
   ] as const);

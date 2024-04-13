@@ -5,6 +5,8 @@ import mapboxgl from "mapbox-gl";
 import { useIpTrackerContext } from "../../context";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOXGL_API_KEY;
+const attributionText =
+  'Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/sebas-tcotd" target="_blank" title="||S||">Sebastian Vargas</a>';
 
 export const useMap = () => {
   const { location } = useIpTrackerContext();
@@ -17,8 +19,14 @@ export const useMap = () => {
       container: mapContainerRef.current as HTMLElement,
       style: "mapbox://styles/mapbox/standard",
       zoom: 16,
+      attributionControl: false,
     });
 
+    mapRef.current?.addControl(
+      new mapboxgl.AttributionControl({
+        customAttribution: attributionText,
+      })
+    );
     mapRef.current.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
     return () => mapRef.current!.remove();
