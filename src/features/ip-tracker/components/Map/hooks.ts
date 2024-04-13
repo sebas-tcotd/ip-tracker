@@ -49,5 +49,6 @@ export const useMap = () => {
 const createCustomMarker = () => {
   const divElement = document.createElement("img");
   divElement.setAttribute("src", "/img/icon-location.svg");
+  divElement.setAttribute("alt", "Map marker");
   return divElement;
 };
